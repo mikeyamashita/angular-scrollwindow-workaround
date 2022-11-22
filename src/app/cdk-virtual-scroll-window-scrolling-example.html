@@ -1,0 +1,16 @@
+
+  <ng-container *ngIf="shouldRun" style="overflow-y: hidden">
+    <cdk-virtual-scroll-viewport itemSize="50" CdkScrollable>
+      <div class="example-header">Content before</div>
+      <div *cdkVirtualFor="let item of items" class="example-item">
+        {{item}}
+      </div>
+      <div class="example-footer">Content after</div>
+    </cdk-virtual-scroll-viewport>
+  </ng-container>
+
+  <div *ngIf="!shouldRun">Please open on StackBlitz to see result</div>
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
